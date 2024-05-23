@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetojavafx.HelloController">
+   <children>
+      <ImageView fitHeight="389.0" fitWidth="857.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/palno%20de%20fundo.jpg" />
+         </image>
+      </ImageView>
+
+      <Button fx:id="Tela01B1" layoutX="65.0" layoutY="133.0" mnemonicParsing="false" onAction="#aoClicarB1Tela01Errado" prefHeight="27.0" prefWidth="754.0" style="-fx-background-color: black;" text="Um conjunto de técnicas para reciclagem de lixo" textFill="#ebeaea">
+
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+
+      <Button fx:id="Tela01B2" id="IDUnico" layoutX="64.0" layoutY="174.0" mnemonicParsing="false" onAction="#aoClicarB2Tela01Verdadeiro" prefHeight="36.0" prefWidth="754.0" style="-fx-background-color: black;" text="Um processo que visa desenvolver uma população consciente e preocupada com o meio ambiente e com os problemas a ele relacionados" textFill="#f8eeee" />
+
+      <Label alignment="CENTER" layoutX="207.0" layoutY="23.0" prefHeight="110.0" prefWidth="443.0" text="O que é educação ambiental?">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+
+       <Button fx:id="Tela01B3" layoutX="67.0" layoutY="218.0" onAction="#aoClicarB3Tela01Errado" prefHeight="27.0" prefWidth="754.0" style="-fx-background-color: black;" text="Uma disciplina escolar focada em biologia" textFill="#f5f5f5">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+
+      <Button fx:id="nextTela" layoutX="768.0" layoutY="324.0" mnemonicParsing="false" onAction="#NextCena" prefHeight="25.0" prefWidth="44.0" style="-fx-background-color: black;" text="next" textFill="#fffdfd" />
+   </children>
+</AnchorPane>

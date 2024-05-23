@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetojavafx.HelloController">
+   <children>
+      <ImageView fitHeight="423.0" fitWidth="857.0" layoutX="-34.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/palno%20de%20fundo.jpg" />
+         </image>
+      </ImageView>
+
+      <Button id="IDUnico" fx:id="Tela03B1" layoutX="129.0" layoutY="146.0" mnemonicParsing="false" onAction="#aoClicarB1Tela03Verdadeiro" prefHeight="27.0" prefWidth="514.0" style="-fx-background-color: black;" text="A diversidade de espécies animais e vegetais em um ambiente" textFill="#ebeaea">
+
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+
+      <Button fx:id="Tela03B2" layoutX="129.0" layoutY="179.0" mnemonicParsing="false" onAction="#aoClicarB2Tela03Errado" prefHeight="27.0" prefWidth="514.0" style="-fx-background-color: black;" text="A variedade de espécies de plantas em um parque" textFill="#f2ecec">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+
+      <Label alignment="CENTER" layoutX="173.0" layoutY="14.0" prefHeight="110.0" prefWidth="443.0" text="O que significa biodiversidade?">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+       <Button fx:id="Tela03B3" layoutX="129.0" layoutY="212.0" onAction="#aoClicarB3Tela03Errado" prefHeight="27.0" prefWidth="514.0" style="-fx-background-color: black;" text="A quantidade de recursos naturais disponíveis" textFill="#f8efef">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+
+      <Button fx:id="fechar" layoutX="732.0" layoutY="26.0" mnemonicParsing="false" onAction="#aoClicarFechar" prefHeight="27.0" prefWidth="60.0" style="-fx-background-color: black;" text="fechar" textFill="#e8dede" />
+
+      <Label fx:id="LBpontuacao" layoutX="154.0" layoutY="291.0" prefHeight="27.0" prefWidth="119.0">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+
+      <Button fx:id="result" layoutX="77.0" layoutY="292.0" mnemonicParsing="false" onAction="#aoClicar" style="-fx-background-color: black;" text="resultado" textFill="#f5f5f5" />
+   </children>
+</AnchorPane>

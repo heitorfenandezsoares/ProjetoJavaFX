@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetojavafx.HelloController">
+   <children>
+      <ImageView fitHeight="423.0" fitWidth="857.0" layoutX="-34.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../image/palno%20de%20fundo.jpg" />
+         </image>
+      </ImageView>
+
+      <Button fx:id="Tela02B1" layoutX="129.0" layoutY="146.0" mnemonicParsing="false" onAction="#aoClicarB1Tela02Errado" prefHeight="27.0" prefWidth="514.0" style="-fx-background-color: black;" text="Ensinar a identificar diferentes espécies de plantas" textFill="#ebeaea">
+
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+
+      <Button fx:id="Tela02B2" layoutX="129.0" layoutY="179.0" mnemonicParsing="false" onAction="#aoClicarB2Tela02Errado" prefHeight="27.0" prefWidth="514.0" style="-fx-background-color: black;" text="Desenvolver novas tecnologias para agricultura" textFill="#f2ecec">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+
+      <Label alignment="CENTER" layoutX="173.0" layoutY="14.0" prefHeight="110.0" prefWidth="443.0" text="Qual é a principal meta da educação ambiental?">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+       <Button fx:id="Tela02B3"  id="IDUnico" layoutX="129.0" layoutY="212.0" onAction="#aoClicarB3Tela02Verdadeiro" prefHeight="27.0" prefWidth="514.0" style="-fx-background-color: black;" text="Promover a conscientização e a mudança de atitudes em relação ao meio ambiente" textFill="#f8efef">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+
+      <Button fx:id="nextTela2" layoutX="701.0" layoutY="314.0" mnemonicParsing="false" onAction="#NextCena02" prefHeight="27.0" prefWidth="46.0" style="-fx-background-color: black;" text="next" textFill="#e8dede" />
+   </children>
+</AnchorPane>
