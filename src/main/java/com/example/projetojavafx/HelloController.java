@@ -11,7 +11,7 @@ import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 
 public class HelloController {
     FXMLLoader fxmlLoader = new FXMLLoader();
@@ -51,6 +51,21 @@ public class HelloController {
 
             Tela01B2.setDisable(true);
             Tela01B3.setDisable(true);
+
+            //--------------------
+            String[] lines = new String[]{"0"};
+
+            String path = "C:\\Users\\heito\\Downloads\\ECLIPSE\\ProjetoJavaFX\\src\\main\\resources\\pontuacao";
+
+            try(BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
+                for (String line: lines) {
+                    bw.write(line);
+                    bw.newLine();
+                }
+            }
+            catch(IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -68,8 +83,19 @@ public class HelloController {
 
             // pontuaçao de resposta
 
-            //pontuacao.incrementar("IDUnico");
-            resultado = ponto + 1;
+            String[] lines = new String[]{"1"};
+
+            String path = "C:\\Users\\heito\\Downloads\\ECLIPSE\\ProjetoJavaFX\\src\\main\\resources\\pontuacao";
+
+            try(BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
+                for (String line: lines) {
+                    bw.write(line);
+                    bw.newLine();
+                }
+            }
+            catch(IOException e) {
+                e.printStackTrace();
+            }
 
         }
     }
@@ -85,6 +111,21 @@ public class HelloController {
 
             Tela01B2.setDisable(true);
             Tela01B1.setDisable(true);
+            //--------------------
+
+            String[] lines = new String[]{"0"};
+
+            String path = "C:\\Users\\heito\\Downloads\\ECLIPSE\\ProjetoJavaFX\\src\\main\\resources\\pontuacao";
+
+            try(BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
+                for (String line: lines) {
+                    bw.write(line);
+                    bw.newLine();
+                }
+            }
+            catch(IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -122,7 +163,7 @@ public class HelloController {
 
 
     @FXML
-    protected void aoClicarB3Tela02Verdadeiro() {
+    protected void aoClicarB3Tela02Verdadeiro() throws IOException {
         //tela 2
         if(Tela02B3 != null) {
             Tela02B3.setStyle("-fx-background-color: green");
@@ -135,10 +176,45 @@ public class HelloController {
 
             // pontuaçao de resposta
 
-           // pontuacao.incrementar("IDUnico");
-            resultado = ponto + 1;
-        }
 
+        }
+        String Path = "C:\\Users\\heito\\Downloads\\ECLIPSE\\ProjetoJavaFX\\src\\main\\resources\\pontuacao";
+        BufferedReader br = null;
+        FileReader fr = null;
+
+        fr = new FileReader(Path);
+        br = new BufferedReader(fr);
+
+        String linha = br.readLine();
+
+        if (linha  == "1") {
+
+            String[] lines = new String[]{"2"};
+
+            String path = "C:\\Users\\heito\\Downloads\\ECLIPSE\\ProjetoJavaFX\\src\\main\\resources\\pontuacao";
+
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+                for (String line : lines) {
+                    bw.write(line);
+                    bw.newLine();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else{
+            String[] lines = new String[]{"1"};
+
+            String path = "C:\\Users\\heito\\Downloads\\ECLIPSE\\ProjetoJavaFX\\src\\main\\resources\\pontuacao";
+
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+                for (String line : lines) {
+                    bw.write(line);
+                    bw.newLine();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
 
     }
@@ -146,7 +222,7 @@ public class HelloController {
     //-----------metodos da tela 3----------------------
 
     @FXML
-    protected void aoClicarB1Tela03Verdadeiro() {
+    protected void aoClicarB1Tela03Verdadeiro() throws IOException {
         //tela 3
         if(Tela03B1 != null) {
             Tela03B1.setStyle("-fx-background-color: green");
@@ -158,8 +234,29 @@ public class HelloController {
             Tela03B3.setDisable(true);
 
             // pontuaçao de resposta
-            //pontuacao.incrementar("IDUnico");
-            resultado = ponto + 1;
+            String Path = "C:\\Users\\heito\\Downloads\\ECLIPSE\\ProjetoJavaFX\\src\\main\\resources\\pontuacao";
+            BufferedReader br = null;
+            FileReader fr = null;
+
+            fr = new FileReader(Path);
+            br = new BufferedReader(fr);
+
+            String linha = br.readLine();
+
+            if (linha == "2") {
+                String[] lines = new String[]{"3"};
+
+                String path = "C:\\Users\\heito\\Downloads\\ECLIPSE\\ProjetoJavaFX\\src\\main\\resources\\pontuacao";
+
+                try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+                    for (String line : lines) {
+                        bw.write(line);
+                        bw.newLine();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
         }
     }
@@ -197,12 +294,42 @@ public class HelloController {
 
     @FXML
     protected void aoClicar() {
-        //LBpontuacao.setText(String.valueOf(pontuacao.getContador("IDUnico")));
-        ResultadoString = String.valueOf(resultado);
-        LBpontuacao.setText(ResultadoString);
+        String path = "C:\\Users\\heito\\Downloads\\ECLIPSE\\ProjetoJavaFX\\src\\main\\resources\\pontuacao";
+        BufferedReader br = null;
+        FileReader fr = null;
+
+        try {
+            fr = new FileReader(path);
+            br = new BufferedReader(fr);
+
+            String line = br.readLine();
+            LBpontuacao.setText(line);
+            System.out.println(line);
+
+
+        }
+        catch(IOException e) {
+            System.out.println("Error: " + e.getMessage());
+
+        }
+        finally {
+            try {
+                if(br != null)
+                    br.close();
+                if(fr != null)
+                    fr.close();
+            }
+            catch(IOException e) {
+                e.printStackTrace();
+
+            }
+        }
+
+
+        //
     }
 
-    // metodos para trocar tela
+    // ----------------------metodos para trocar tela---------------------------------
 
     @FXML
     protected void NextCena(ActionEvent evento) throws IOException {
